@@ -1,0 +1,193 @@
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  background:
+    linear-gradient(
+      160deg,
+      rgba(20, 41, 67, 0.82),
+      rgba(31, 58, 95, 0.78)
+    ),
+    url('../assets/biblioteka-sh.webp');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: var(--color-white);
+  padding: 120px 0 104px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero__inner {
+  position: relative;
+  max-width: 660px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The site slogan, styled like a literary motto rather than a label */
+.hero__slogan {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-gold-light);
+  margin-bottom: 20px;
+}
+
+.hero__slogan::before,
+.hero__slogan::after {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--color-gold);
+  opacity: 0.7;
+}
+
+.hero__title {
+  font-size: 3.6rem;
+  letter-spacing: -0.01em;
+  color: var(--color-white);
+  margin-bottom: 14px;
+}
+
+.hero__subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-gold-light);
+  margin-bottom: 18px;
+}
+
+.hero__description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 36px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------- How it works ---------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.step-card {
+  padding: 28px 22px;
+  text-align: left;
+}
+
+.step-card__number {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  margin-bottom: 14px;
+}
+
+.step-card__title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.step-card__text {
+  color: var(--color-ink-light);
+  font-size: 0.92rem;
+}
+
+/* ---------- Featured books ---------- */
+.section--alt {
+  background: var(--color-cream-alt);
+}
+
+.book-grid {
+  margin-bottom: 40px;
+}
+
+.home__browse-all {
+  margin-top: 4px;
+}
+
+/* ---------- About teaser ---------- */
+.about-teaser__inner {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.about-teaser__image {
+  height: 280px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.about-teaser__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-teaser__content p {
+  color: var(--color-ink-light);
+  margin: 14px 0 24px;
+}
+
+@media (max-width: 900px) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-teaser__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-teaser__image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    padding: 80px 0 64px;
+  }
+
+  .hero__title {
+    font-size: 2.4rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero__slogan {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .hero__slogan::before,
+  .hero__slogan::after {
+    width: 20px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}

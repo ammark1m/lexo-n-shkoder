@@ -1,0 +1,195 @@
+/* ---------- Back link ---------- */
+.my-card-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 24px;
+}
+
+.my-card-page__back:hover {
+  color: var(--color-maroon);
+}
+
+/* ---------- Logout action ---------- */
+.my-card-page__logout {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.my-card-page__logout-note {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--color-ink-light);
+}
+
+/* ---------- Library card visual ---------- */
+.library-card {
+  max-width: 420px;
+  margin: 0 auto 24px;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(150deg, var(--color-navy), var(--color-navy-dark));
+  color: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.library-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 10%, rgba(201, 162, 39, 0.25), transparent 55%);
+  pointer-events: none;
+}
+
+.library-card__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.library-card__brand {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.library-card__chip {
+  width: 34px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold));
+}
+
+.library-card__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+}
+
+.library-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 26px;
+}
+
+.library-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.library-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 14px 20px;
+}
+
+.library-card__footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 130px;
+}
+
+.library-card__label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.library-card__value {
+  font-size: 0.92rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Reserved / Borrowed tables ---------- */
+.my-card-section {
+  margin-bottom: 44px;
+}
+
+.my-card-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.my-card-table {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.my-card-table__head,
+.my-card-table__row {
+  display: grid;
+  grid-template-columns: minmax(160px, 2fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(110px, 1fr);
+  gap: 10px 12px;
+  align-items: center;
+  padding: 16px 22px;
+  min-width: 600px;
+}
+
+.my-card-table__head > span,
+.my-card-table__row > span {
+  min-width: 0;
+}
+
+.my-card-table__head {
+  background: var(--color-cream-alt);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-light);
+  font-weight: 700;
+}
+
+.my-card-table__row {
+  border-top: 1px solid var(--color-border);
+  font-size: 0.92rem;
+}
+
+.my-card-table__title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-weight: 600;
+}
+
+.my-card-table__title small {
+  font-weight: 400;
+  color: var(--color-ink-light);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 720px) {
+  .my-card-table__head {
+    display: none;
+  }
+
+  .my-card-table__row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 16px 20px;
+    min-width: 0;
+  }
+
+  .my-card-table {
+    overflow-x: hidden;
+  }
+}
